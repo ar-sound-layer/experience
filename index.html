@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link rel="stylesheet" href="https://use.typekit.net/lfa0oid.css">
+
+    <style>
+
+    body {
+      background-color: black;
+
+
+      user-select: none; /* supported by Chrome and Opera */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+    }
+
+    #my-button {
+      font-size: 42px;
+      font-weight: bold;
+      font-family: helvetica, sans-serif;
+      font-style: normal;
+      padding-left: 15px;
+      text-align: center;
+
+      color: #FFF;
+      border-color: #FFF;
+      border-style: solid;
+      background-color: black;
+      border-radius: 0px;
+
+      position: absolute;
+      left: 50%;
+      bottom: 8%;
+      transform: translate(-50%, -50%);
+
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      cursor: pointer;
+}
+      #my-button:hover{
+        background-color: white;
+        color: black;;
+      }
+
+      .svg-class {
+        position: absolute;
+        top: 15%;
+        max-height: 60%;
+        max-width: 90%;
+        transform: translate(-50%, 0);
+        left: 50%;
+
+      }
+
+
+
+
+    </style>
+
+
+    <title>Home</title>
+    <script src="p5.min.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="p5.geolocation.js"></script>
+
+  </head>
+  <body>
+
+    <img src="testo.svg" class="svg-class"/>
+    <button id="my-button" onclick="location.href='experience.html'" type="button">PLAY</button>
+
+
+  </body>
+
+  <script src="sketch0.js"></script>
+
+</html>
