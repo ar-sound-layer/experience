@@ -82,6 +82,7 @@ var uiColor = 'white';
 var zoffRemap = 0.003;
 
 //SOUNDS
+var sound0;
 var sound1;
 var sound2;
 var sound3;
@@ -94,14 +95,17 @@ let lonTxt = 'loading';
 function preload() {
   myInitLoc = getCurrentPosition();
 
-  sound1 = loadSound("./sounds/cat.mp3");
-  sound2 = loadSound("./sounds/cow.mp3");
-  sound3 = loadSound("./sounds/dog.mp3");
-  sound4 = loadSound("./sounds/frog.mp3");
+  sound0 = loadSound("./sounds/savana-ambient.mp3");
+  sound1 = loadSound("./sounds/leone.mp3");
+  sound2 = loadSound("./sounds/rane.mp3");
+  sound3 = loadSound("./sounds/scimmia.mp3");
+  sound4 = loadSound("./sounds/uccello.mp3");
 
 }
 
 function setup() {
+  sound0.loop();
+  sound0.amp(0.4);
 
   myCanvas = createCanvas(windowWidth, windowHeight);
 
