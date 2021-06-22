@@ -104,18 +104,19 @@ function preload() {
   if (experienceNum == 1) {
     experienceTxt = 'EXPERIENCE_1';
     sound0 = loadSound("./sounds/savana-ambient.mp3");
+    sound1 = loadSound("./sounds/leone.mp3");
+    sound2 = loadSound("./sounds/rane.mp3");
+    sound3 = loadSound("./sounds/scimmia.mp3");
+    sound4 = loadSound("./sounds/uccello.mp3");
   }
   else if (experienceNum == 2) {
     experienceTxt = 'EXPERIENCE_2';
     sound0 = loadSound("./sounds/horror-ambient.mp3");
+    sound1 = loadSound("./sounds/door.mp3");
+    sound2 = loadSound("./sounds/ghost.mp3");
+    sound3 = loadSound("./sounds/growl.mp3");
+    sound4 = loadSound("./sounds/piano.mp3");
   }
-
-
-
-  sound1 = loadSound("./sounds/leone.mp3");
-  sound2 = loadSound("./sounds/rane.mp3");
-  sound3 = loadSound("./sounds/scimmia.mp3");
-  sound4 = loadSound("./sounds/uccello.mp3");
 
 }
 
