@@ -92,10 +92,26 @@ var sound4;
 let latTxt = 'loading';
 let lonTxt = 'loading';
 
+var experienceNum;
+var experienceTxt;
+
+
 function preload() {
   myInitLoc = getCurrentPosition();
 
-  sound0 = loadSound("./sounds/savana-ambient.mp3");
+  experienceNum = round(random(1,2));
+
+  if (experienceNum == 1) {
+    experienceTxt = 'EXPERIENCE_1';
+    sound0 = loadSound("./sounds/savana-ambient.mp3");
+  }
+  else if (experienceNum == 2) {
+    experienceTxt = 'EXPERIENCE_2';
+    sound0 = loadSound("./sounds/horror-ambient.mp3");
+  }
+
+
+
   sound1 = loadSound("./sounds/leone.mp3");
   sound2 = loadSound("./sounds/rane.mp3");
   sound3 = loadSound("./sounds/scimmia.mp3");
@@ -227,7 +243,8 @@ function draw() {
   text(lonTxt, windowWidth*0.975, windowHeight*0.975);
 
   textAlign(LEFT);
-  text('EXPERIENCE_1', windowWidth*0.025, windowHeight*0.975);
+
+  text(experienceTxt, windowWidth*0.025, windowHeight*0.975);
 
   pop();
 
