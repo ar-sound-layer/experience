@@ -99,7 +99,7 @@ var experienceTxt;
 function preload() {
   myInitLoc = getCurrentPosition();
 
-  experienceNum = round(random(1,2));
+  experienceNum = round(random(1,3));
 
   if (experienceNum == 1) {
     experienceTxt = 'EXPERIENCE_1';
@@ -116,6 +116,14 @@ function preload() {
     sound2 = loadSound("./sounds/ghost.mp3");
     sound3 = loadSound("./sounds/growl.mp3");
     sound4 = loadSound("./sounds/piano.mp3");
+  }
+  else if (experienceNum == 3) {
+    experienceTxt = 'EXPERIENCE_3';
+    sound0 = loadSound("./sounds/saloon-ambient.mp3");
+    sound1 = loadSound("./sounds/bicchiere.mp3");
+    sound2 = loadSound("./sounds/cat.mp3");
+    sound3 = loadSound("./sounds/cavallo.mp3");
+    sound4 = loadSound("./sounds/pistole.mp3");
   }
 
 }
@@ -371,8 +379,8 @@ function draw() {
   if (distanceFence1 < distanceFence3 && distanceFence1 < distanceFence6 && distanceFence1 < distanceFence8){
     if (distanceFence1 < maxDistFence1 * coeffMaxTrigger) {
       var color1Remap = map(distanceFence1, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMaxTrigger, 255, 0);
-      // uiColor = color(255, color1Remap, color1Remap);
-      uiColor = color(255, 0, 0);
+      uiColor = color(255, color1Remap, color1Remap);
+
       zoffRemap = map(distanceFence1, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMaxTrigger, 0.003, 0.007);
       noiseMax = map(distanceFence1, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMaxTrigger, 0.4, 2);
     } else {
@@ -383,8 +391,8 @@ function draw() {
   } else if (distanceFence3 < distanceFence1 && distanceFence3 < distanceFence6 && distanceFence3 < distanceFence8){
     if (distanceFence3 < maxDistFence1 * coeffMaxTrigger) {
       var color3Remap = map(distanceFence3, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 255, 0);
-      // uiColor = color(color3Remap, 255, color3Remap);
-      uiColor = color(0, 255, 0);
+      uiColor = color(color3Remap, 255, color3Remap);
+
       zoffRemap = map(distanceFence3, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 0.003, 0.007);
       noiseMax = map(distanceFence3, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 0.4, 2);
     } else {
@@ -395,8 +403,8 @@ function draw() {
   } else if (distanceFence6 < distanceFence1 && distanceFence6 < distanceFence3 && distanceFence6 < distanceFence8){
     if (distanceFence6 < maxDistFence1 * coeffMaxTrigger) {
       var color6Remap = map(distanceFence6, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 255, 0);
-      // uiColor = color(color6Remap, color6Remap, 255);
-      uiColor = color(0, 0, 255);
+      uiColor = color(color6Remap, color6Remap, 255);
+
       zoffRemap = map(distanceFence6, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 0.003, 0.007);
       noiseMax = map(distanceFence6, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 0.4, 2);
     } else {
@@ -407,8 +415,8 @@ function draw() {
   } else if (distanceFence8 < distanceFence1 && distanceFence8 < distanceFence3 && distanceFence8 < distanceFence6){
     if (distanceFence8 < maxDistFence1 * coeffMaxTrigger) {
       var color8Remap = map(distanceFence8, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 255, 0);
-      // uiColor = color(255, 255, color8Remap);
-      uiColor = color(255, 255, 0);
+      uiColor = color(255, 255, color8Remap);
+
       zoffRemap = map(distanceFence8, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 0.003, 0.007);
       noiseMax = map(distanceFence8, maxDistFence1*coeffMaxTrigger, maxDistFence1 *coeffMinTrigger, 0.4, 2);
     } else {
